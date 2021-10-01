@@ -17,8 +17,32 @@ class GeneralPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.white,
+          ),
+          SafeArea(
+            child: Container(
+              color: backColor ?? Colors.white,
+            ),
+          ),
+          SafeArea(
+            child: ListView(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: defaultMargin,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
