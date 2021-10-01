@@ -1,16 +1,18 @@
 part of 'pages.dart';
 
 class GeneralPage extends StatelessWidget {
-  // final String title;
-  // final String subtitle;
-  // final Function onBackButtonOnPressed;
-  // final Widget child;
-  // GeneralPage({
-  //   this.title = "Title",
-  //   required this.subtitle,
-  //   required this.onBackButtonOnPressed,
-  //   required this.child,
-  // });
+  final String title;
+  final String subtitle;
+  final Function onBackButtonPressed;
+  final Widget child;
+  final Color backColor;
+
+  GeneralPage(
+      {this.title = "Title",
+      this.subtitle = "subtitle",
+      this.onBackButtonPressed,
+      this.child,
+      this.backColor});
 
   @override
   Widget build(BuildContext context) {
