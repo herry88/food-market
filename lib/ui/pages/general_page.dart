@@ -19,24 +19,20 @@ class GeneralPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            color: Colors.white,
-          ),
+          Container(color: Colors.white),
           SafeArea(
-            child: Container(
-              color: backColor ?? Colors.white,
-            ),
-          ),
+              child: Container(
+            color: backColor ?? Colors.white,
+          )),
           SafeArea(
             child: ListView(
               children: [
                 Column(
                   children: [
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: defaultMargin,
-                      ),
-                      height: 100.0,
+                      padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+                      width: double.infinity,
+                      height: 100,
                       color: Colors.white,
                       child: Row(
                         children: [
@@ -48,18 +44,13 @@ class GeneralPage extends StatelessWidget {
                                     }
                                   },
                                   child: Container(
-                                    width: 24.0,
-                                    height: 24.0,
-                                    margin: EdgeInsets.only(
-                                      right: 26.0,
-                                    ),
+                                    width: 24,
+                                    height: 24,
+                                    margin: EdgeInsets.only(right: 26),
                                     decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          'assets/back_arrow.png',
-                                        ),
-                                      ),
-                                    ),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                'assets/back_arrow.png'))),
                                   ),
                                 )
                               : SizedBox(),
@@ -70,17 +61,27 @@ class GeneralPage extends StatelessWidget {
                               Text(
                                 title,
                                 style: GoogleFonts.poppins(
-                                  fontSize: 22.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                                    fontSize: 22, fontWeight: FontWeight.w500),
                               ),
+                              Text(
+                                subtitle,
+                                style: GoogleFonts.poppins(
+                                    color: "8D92A3".toColor(),
+                                    fontWeight: FontWeight.w300),
+                              )
                             ],
-                          ),
+                          )
                         ],
                       ),
                     ),
+                    Container(
+                      height: defaultMargin,
+                      width: double.infinity,
+                      color: "FAFAFC".toColor(),
+                    ),
+                    child ?? SizedBox()
                   ],
-                )
+                ),
               ],
             ),
           ),
