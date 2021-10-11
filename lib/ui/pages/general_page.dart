@@ -36,6 +36,43 @@ class GeneralPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                         horizontal: defaultMargin,
                       ),
+                      height: 100.0,
+                      color: Colors.white,
+                      child: Row(
+                        children: [
+                          onBackButtonPressed != null
+                              ? GestureDetector(
+                                  onTap: () {
+                                    if (onBackButtonPressed != null) {
+                                      onBackButtonPressed();
+                                    }
+                                  },
+                                  child: Container(
+                                    width: 24.0,
+                                    height: 24.0,
+                                    margin: EdgeInsets.only(
+                                      right: 26.0,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/back_arrow.png',
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              : SizedBox(),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children:[
+                                  
+
+                                ]
+                              )
+                        ],
+                      ),
                     ),
                   ],
                 )
