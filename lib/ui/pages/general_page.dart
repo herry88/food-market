@@ -63,14 +63,19 @@ class GeneralPage extends StatelessWidget {
                                   ),
                                 )
                               : SizedBox(),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children:[
-                                  
-
-                                ]
-                              )
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                title,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
