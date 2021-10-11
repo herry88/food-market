@@ -8,3 +8,4 @@ import 'package:supercharged/supercharged.dart';
 //ui
 part 'general_page.dart';
 part 'sign_in_page.dart';
+part 'sign_up_page.dart';
