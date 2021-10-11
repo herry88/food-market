@@ -1,7 +1,8 @@
 part of 'widgets.dart';
 
 class FoodCard extends StatelessWidget {
-  const FoodCard({ Key key }) : super(key: key);
+  final Food food;
+  FoodCard({this.food});
 
   @override
   Widget build(BuildContext context) {
