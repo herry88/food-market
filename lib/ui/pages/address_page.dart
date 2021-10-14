@@ -104,27 +104,41 @@ class _AddressPageState extends State<AddressPage> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Colors.black)),
+            // child: DropdownButton(
+            //     isExpanded: true,
+            //     underline: SizedBox(),
+            //     items: [
+            //       DropdownMenuItem(
+            //           child: Text(
+            //         'Bandung',
+            //         style: blackFontStyle3,
+            //       )),
+            //       DropdownMenuItem(
+            //           child: Text(
+            //         'Jakarta',
+            //         style: blackFontStyle3,
+            //       )),
+            //       DropdownMenuItem(
+            //           child: Text(
+            //         'Surabaya',
+            //         style: blackFontStyle3,
+            //       ))
+            //     ],
+            //     onChanged: (item) {}),
             child: DropdownButton(
-                isExpanded: true,
-                underline: SizedBox(),
-                items: [
-                  DropdownMenuItem(
-                      child: Text(
+              isExpanded: true,
+              underline: SizedBox(),
+              items: [
+                DropdownMenuItem(
+                  child: Text(
                     'Bandung',
                     style: blackFontStyle3,
-                  )),
-                  DropdownMenuItem(
-                      child: Text(
-                    'Jakarta',
-                    style: blackFontStyle3,
-                  )),
-                  DropdownMenuItem(
-                      child: Text(
-                    'Surabaya',
-                    style: blackFontStyle3,
-                  ))
-                ],
-                onChanged: (item) {}),
+                  ),
+                ),
+                
+              ],
+              onChanged: (item) {},
+            ),
           ),
           Container(
             width: double.infinity,
