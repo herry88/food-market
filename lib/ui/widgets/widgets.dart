@@ -9,3 +9,4 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 part 'food_cart.dart';
 part 'custom_tabbar.dart';
+part 'custom_bottom_navbar.dart';
