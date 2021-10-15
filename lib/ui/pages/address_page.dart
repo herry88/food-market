@@ -6,6 +6,13 @@ class AddressPage extends StatefulWidget {
 }
 
 class _AddressPageState extends State<AddressPage> {
+  String _valCity;
+  List _listCity = [
+    'Jakarta',
+    'Bandung',
+    'Yogya',
+    'Bogor',
+  ];
   @override
   Widget build(BuildContext context) {
     TextEditingController phoneController = TextEditingController();
@@ -84,9 +91,10 @@ class _AddressPageState extends State<AddressPage> {
             child: TextField(
               controller: houseNumController,
               decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintStyle: greyFontStyle,
-                  hintText: 'Type your house number'),
+                border: InputBorder.none,
+                hintStyle: greyFontStyle,
+                hintText: 'Type your house number',
+              ),
             ),
           ),
           Container(
@@ -104,40 +112,21 @@ class _AddressPageState extends State<AddressPage> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Colors.black)),
-            // child: DropdownButton(
-            //     isExpanded: true,
-            //     underline: SizedBox(),
-            //     items: [
-            //       DropdownMenuItem(
-            //           child: Text(
-            //         'Bandung',
-            //         style: blackFontStyle3,
-            //       )),
-            //       DropdownMenuItem(
-            //           child: Text(
-            //         'Jakarta',
-            //         style: blackFontStyle3,
-            //       )),
-            //       DropdownMenuItem(
-            //           child: Text(
-            //         'Surabaya',
-            //         style: blackFontStyle3,
-            //       ))
-            //     ],
-            //     onChanged: (item) {}),
             child: DropdownButton(
+              hint: Text("Select City :"),
               isExpanded: true,
-              underline: SizedBox(),
-              items: [
-                DropdownMenuItem(
-                  child: Text(
-                    'Bandung',
-                    style: blackFontStyle3,
-                  ),
-                ),
-                
-              ],
-              onChanged: (item) {},
+              value: _valCity,
+              items: _listCity.map((value) {
+                return DropdownMenuItem(
+                  child: Text(value),
+                  value: value,
+                );
+              }).toList(),
+              onChanged: (value) {
+                setState(() {
+                  _valCity = value;
+                });
+              },
             ),
           ),
           Container(
