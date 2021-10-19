@@ -31,14 +31,14 @@ class _MainPageState extends State<MainPage> {
             },
             children: [
               Center(
-                child: Text('Body'),
+                child: FoodPage(),
               ),
-              // Center(
-              //   child: OrderHistoryPage(),
-              // ),
-              // Center(
-              //   child: ProfilePage(),
-              // ),
+              Center(
+                child: Text('ORder'),
+              ),
+              Center(
+                child: Text('Profile'),
+              ),
             ],
           )),
           Align(
