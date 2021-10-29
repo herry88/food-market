@@ -10,4 +10,5 @@ part 'food_cart.dart';
 part 'custom_tabbar.dart';
 part 'custom_bottom_navbar.dart';
 part 'food_list_item.dart';
+part 'orderlistitem.dart';
 part 'rating.dart';
