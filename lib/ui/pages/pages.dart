@@ -16,3 +16,4 @@ part 'main_page.dart';
 part 'food_page.dart';
 part 'orderpage.dart';
 part 'illustrationpage.dart';
+part 'profil_page.dart';
