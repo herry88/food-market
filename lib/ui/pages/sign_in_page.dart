@@ -104,6 +104,7 @@ class _SignInState extends State<SignIn> {
                 : ElevatedButton(
                     onPressed: () {
                       // Get.to(SignUpPage());
+                      Get.to(SignUpPage());
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
