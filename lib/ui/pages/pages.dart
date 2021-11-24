@@ -22,3 +22,4 @@ part 'illustrationpage.dart';
 part 'profil_page.dart';
 part 'food_detail_page.dart';
 part 'paymentpage.dart';
+part 'success_sign_up.dart';
